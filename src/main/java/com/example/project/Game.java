@@ -84,6 +84,8 @@ public class Game{
             System.out.println("YOU LOSE!");
 
         }
+
+        scanner.close();
     }
 
     public void initialize(){

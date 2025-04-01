@@ -14,11 +14,10 @@ public class Grid{
      */
     public Grid(int size) {
         this.size = size;
-        grid = new Sprite[size][size];
-        System.out.println(grid.length);
+        grid = new Sprite[size][size]; // Creates a size x size array
         for(int i = 0; i < size; i ++){
             for(int j = 0; j < size; j ++){
-                placeSprite(new Dot(i, j));
+                placeSprite(new Dot(i, j)); // Fills the array with Dots
             }
         }
     }
@@ -45,16 +44,16 @@ public class Grid{
 
         // Determines where the sprite was before it last moved, and then places a Dot there to overwrite the Player object that was once there.
         if(direction.equals("w")){ // If the player moved up
-            placeSprite(new Dot(s.getX(), s.getY()-1));
+            placeSprite(new Dot(s.getX(), s.getY()-1)); // Places a Dot in the postion where the sprite used to be
         }
         else if(direction.equals("a")){ // If the player moved left
-            placeSprite(new Dot(s.getX() + 1, s.getY()));
+            placeSprite(new Dot(s.getX() + 1, s.getY())); // Places a Dot in the postion where the sprite used to be
         }
         if(direction.equals("s")){ // If the player moved down
-            placeSprite(new Dot(s.getX(), s.getY() + 1));
+            placeSprite(new Dot(s.getX(), s.getY() + 1)); // Places a Dot in the postion where the sprite used to be
         }
         if(direction.equals("d")){ // If the player moved right
-            placeSprite(new Dot(s.getX() - 1, s.getY()));
+            placeSprite(new Dot(s.getX() - 1, s.getY())); // Places a Dot in the postion where the sprite used to be
         }
     }
 
